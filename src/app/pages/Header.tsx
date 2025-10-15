@@ -11,14 +11,14 @@ export default function Header() {
 
     return (
         <>
-            <header className='flex justify-between items-center p-4 sticky z-50 bg-white/90 shadow-md rounded-xl'>
+            <header className='flex justify-between items-center p-4 sticky z-50'>
                 <h1 className='text-2xl font-bold text-gray-800'>
                     Air Conditioning Co.
                 </h1>
 
                 {/* MOBILE MENU BUTTON */}
                 <button
-                    className='md:hidden rounded hover:bg-gray-200 transition text-2xl text-gray-700'
+                    className='md:hidden rounded text-2xl'
                     onClick={() => setOpen(!isOpen)}
                     aria-label='Toggle menu'
                 >
@@ -32,7 +32,7 @@ export default function Header() {
                             <li key={toCamelCase(item)}>
                                 <a
                                     href={toCamelCase(item)}
-                                    className='block p-2 text-gray-700 hover:shadow-md hover:rounded-xl transition-all duration-200'
+                                    className='block p-2 text-gray-700 hover:shadow-md hover:rounded-xl hover:bg-gray-200 transition-all duration-300'
                                 >
                                     {item}
                                 </a>
@@ -53,7 +53,7 @@ export default function Header() {
 
             <nav
                 className={`
-                    fixed inset-y-0 right-0 z-40 h-auto md:hidden
+                    fixed inset-y-0 right-0 z-40 md:hidden
                     transform transition-all duration-600 ease-in-out
 					rounded-bl-4xl
                     flex flex-col items-center justify-center
@@ -65,7 +65,7 @@ export default function Header() {
                         <li key={toCamelCase(item)}>
                             <a
                                 href={toCamelCase(item)}
-                                className='block p-4 text-gray-700 hover:text-gray-400 transition z-50'
+                                className='block p-4 z-50'
                                 onClick={closeMenu}
                             >
                                 {item}

@@ -2,7 +2,7 @@
 
 :root {
     --background: #ffffff;
-    padding: 2%;
+    padding-inline: 3%;
 }
 
 @theme inline {
